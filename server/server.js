@@ -19,7 +19,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.post('/', async (req, res) => {
-    try {
+    
         const {messages} = req.body
 
         const completion = await openai.createChatCompletion({
@@ -27,16 +27,13 @@ app.post('/', async (req, res) => {
         messages: [
             {"role": "system", "content": "You are AI Cohort 2.0, a helpful AI assistant developed by David Nkana as part of a portfolio project."},
             ...messages,
-        ]
+        ],
+        
     })
     res.json({
         completion: completion.data.choices[0].message,
     })
-    } catch (error) {
-        alert(error)
-        res.status(500).send(error || 'Something went wrong');
-    }
-
+    console.log(completion.data.choices[0].message)
     
 })
 
