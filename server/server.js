@@ -18,6 +18,12 @@ const app = express()
 app.use(bodyParser.json())
 app.use(cors())
 
+app.get('/', async (req, res) => {
+    res.status(200).send({
+      message: 'Server ran successfully'
+    })
+  })
+
 app.post('/', async (req, res) => {
     
         const {messages} = req.body
@@ -36,9 +42,6 @@ app.post('/', async (req, res) => {
     
 })
 
-app.get('/', (req, res) => {
-    res.send('This is the root path')
-})
 
 app.listen(5000, () => console.log('AI server started on http://localhost:5000'))
 

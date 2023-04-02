@@ -86,8 +86,8 @@ const handleSubmit = async (e) => {
     chatContainer.appendChild(messageElement)
     chatContainer.scrollTo(-1000, chatContainer.scrollHeight)
 
- 
-    const response = await fetch('https://chat-ai-cohort-2-0.onrender.com', {
+    // https://chat-ai-cohort-2-0.onrender.com
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
