@@ -17,6 +17,7 @@ const app = express()
 
 app.use(bodyParser.json())
 app.use(cors())
+app.use(express.json())
 
 app.get('/', async (req, res) => {
     res.status(200).send({
