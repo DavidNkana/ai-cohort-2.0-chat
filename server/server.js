@@ -1,7 +1,6 @@
 import { Configuration, OpenAIApi } from "openai";
 import cors from 'cors'
 import express from 'express'
-import bodyParser from "body-parser";
 import * as dotenv from 'dotenv'
 
 dotenv.config()
@@ -18,7 +17,6 @@ const openai = new OpenAIApi(configuration)
 
 const app = express()
 //
-app.use(bodyParser.json())
 app.use(cors())
 app.use(express.json())
 
