@@ -565,14 +565,7 @@ form img:hover {
     display: none;
   }
 
-  .reset-btn
-  {
-    position: fixed;
-    background: #202123;
-    z-index: 500;
-    border-bottom: .5px solid #5c5d6b;
-    align-items: center;
-  }
+ 
 
   .reset-btn .fa-repeat
   {
