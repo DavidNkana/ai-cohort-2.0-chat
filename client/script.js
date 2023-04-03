@@ -121,7 +121,9 @@ reset.addEventListener('click', () => {
     const delValue = localStorage.getItem('delValue');
     if (delValue) {
         del.innerHTML = delValue;
-    }    
+    }
+    const loadingElement = document.querySelector('#loading');
+    loadingElement.style.display = 'none'; // hide the loader
 })
 
 resetbtn.addEventListener('click', () => {
@@ -130,6 +132,8 @@ resetbtn.addEventListener('click', () => {
     if (delValue) {
         del.innerHTML = delValue;
     }    
+    const loadingElement = document.querySelector('#loading');
+    loadingElement.style.display = 'none'; // hide the loader
 })
 
 form.addEventListener('submit', handleSubmit)
