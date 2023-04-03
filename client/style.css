@@ -526,7 +526,7 @@ form img:hover {
   .head-menu
   {
     background: var(--bg-color);
-    border: .5px solid var(--menu-btn);
+    border-bottom: .5px solid var(--menu-btn);
     position: fixed;
     top: 0;
     left: 0;
