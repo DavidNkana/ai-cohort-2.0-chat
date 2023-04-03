@@ -556,10 +556,6 @@ form img:hover {
     margin-top: 50px;
   }
 
-  .message {
-    padding:1rem 2rem 4rem;
-  }
-
   #click_to_convert i
   {
     display: none;
