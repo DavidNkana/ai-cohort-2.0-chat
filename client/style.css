@@ -568,8 +568,6 @@ form img:hover {
   .reset-btn
   {
     position: fixed;
-    height: 45px;
-    width: 100%;
     background: #202123;
     z-index: 500;
     border-bottom: .5px solid #5c5d6b;
