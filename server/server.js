@@ -6,7 +6,7 @@ import * as dotenv from 'dotenv'
 dotenv.config() // configures .env 
 
 const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: process.env.OPENAI_API_KEY, // .env variables
     organization: process.env.ORGANIZATION,
 })
 
