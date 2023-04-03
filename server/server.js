@@ -3,7 +3,7 @@ import cors from 'cors'
 import express from 'express'
 import * as dotenv from 'dotenv'
 
-dotenv.config()
+dotenv.config() // configures .env 
 
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
