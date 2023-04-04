@@ -270,7 +270,7 @@ body.active
   align-items: center;
   border-radius: 2px;
   padding:5px;
-  background: orange;
+  background:  #FFCBA4;
   margin-right: 20px;
 }
 
@@ -340,6 +340,11 @@ textarea {
   resize: none;
   overflow: auto;
   max-height: 200px;
+}
+
+textarea::placeholder 
+{
+  color: #8e8ea0;
 }
 
 
@@ -446,13 +451,14 @@ form img:hover {
     z-index: 1000;
 }
 
-#scrollBtn img 
+#scrollBtn i
 {
-    width: 25px;
+    font-size: 12px;
     cursor: pointer;
     background: var(--p-b);
-    padding: 5px;
+    padding: 5px 6px;
     border-radius: 50%;
+    color: var(--text-color);
     border: .5px solid var(--black);
 }
 
@@ -541,7 +547,6 @@ form img:hover {
     position: fixed;
     top: 0;
     left: 0;
-    border-radius: 0 0 10px 10px;
     width: 100%;
     align-items: center;
     height: 50px;
@@ -556,7 +561,7 @@ form img:hover {
   {
     color: #fff;
     position: fixed;
-    top: 14px;
+    top: 16px;
     left: 12px;
     font-size: 2rem;
     cursor: pointer;

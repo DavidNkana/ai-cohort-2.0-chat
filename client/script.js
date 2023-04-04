@@ -1,5 +1,5 @@
 import bot from './assets/AI.png'
-import user from './assets/f-user.png'
+import user from './assets/user.png'
 
 
 const chatContainer = document.querySelector('#chat-container');
@@ -20,9 +20,9 @@ menu.addEventListener('click', () => {
 
 
 themeToggle.addEventListener('click', () => {
-    themeToggle.classList.toggle('fa-sun')
     themeToggle.classList.toggle('fa-moon')
-    if(themeToggle.classList.contains('fa-sun')) 
+    themeToggle.classList.toggle('fa-sun')
+    if(themeToggle.classList.contains('fa-moon')) 
     {
         document.body.classList.add('active')
     }
