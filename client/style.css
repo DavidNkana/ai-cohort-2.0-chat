@@ -478,6 +478,27 @@ form img:hover {
     display: none;
 }
 
+.errorMessage 
+{
+  background: rgba(255, 0, 0, 0.171);
+  padding: 1rem;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
