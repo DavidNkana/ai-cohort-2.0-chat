@@ -610,9 +610,9 @@ form img:hover {
   {
     color: #fff;
     position: fixed;
-    top: 15px;
+    top: 16px;
     right: 12px;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     cursor: pointer;
     display: block;
     z-index: 500;
