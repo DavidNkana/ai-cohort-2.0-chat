@@ -13,6 +13,7 @@
                 -.4rem -.4rem 1rem #333 inset;
   --ai-bg: #444654;  
   --form: #40414f; 
+  --form-shadow: #000;
   --app: #343541;   
   --borderline: #222;   
   --text-color: #dcdcdc;  
@@ -20,6 +21,7 @@
   --button-hover: #202123;
   --menu-btn: #8b8b8b;  
   --p-b: #3e3f4b;
+  --scrollbtnborder: white;
 }
 
 html::-webkit-scrollbar {
@@ -61,18 +63,21 @@ html
 
 body 
 {
-  padding-left: 30rem;
+  padding-left: 25rem;
+  margin: auto;
   background: var(--app);
 }
 body.active 
 {
-  --ai-bg: #e7e8eb;  
+  --ai-bg: #fff;  
   --form: #ffffff; 
-  --app: #ffffff;   
+  --form-shadow: #fff;
+  --app: #e7e8eb;   
   --borderline: #adadad;   
   --text-color: hsl(0, 0%, 13%);     
   --button-hover: #f7f7f8;
   --p-b: #f7f7f8;
+  --scrollbtnborder: #222;
 }
 
 .header 
@@ -83,19 +88,29 @@ body.active
   left: 0;
   z-index: 20000;
   background: var(--bg-color);
-  width: 30rem;
+  width: 25rem;
   border-right: var(--box-shadow);
   height: 100%;
-  padding: 2rem;
+  padding: .5rem;
   text-align: center;
 }
 
 .header .logo img
 {
-  margin: 1rem 0;
+  margin: .5rem 0;
   border: 1rem solid transparent;
   height: 5rem;
   width: 5rem;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .header .logo h3 
@@ -119,26 +134,52 @@ body.active
 
 .header .navbar a
 {
-  margin: 1.7rem auto;
-  padding: 1rem 8rem;
-  font-size: 1.4rem;
+  display: flex;
+  margin: .7rem auto;
+  width: 23rem;
+  height: 4rem;
+  padding: 2rem;
   border-radius: 5px;
+  font-size: 1.4rem;
   color: var(--black);
+  font-weight: 100;
   align-items: center;
+  cursor: pointer;
   background: var(--bg-color);
-  border: .1px solid #4d4d4f;
+  border: .1px solid #3a3a3a;
 }
 
 .header .navbar .Previous
 {
-  margin: 1.7rem auto;
-  padding: 1rem 7rem;
-  font-size: 1.4rem;
+  display: flex;
+  margin: .7rem auto;
+  width: 23rem;
+  height: 4rem;
+  padding: 2rem;
   border-radius: 5px;
+  font-size: 1.4rem;
   color: var(--black);
   align-items: center;
+  cursor: pointer;
   background: var(--bg-color);
-  border: .1px solid #4d4d4f;
+  border: .1px solid #3a3a3a;
+}
+
+.header .navbar .reset
+{
+  display: flex;
+  margin: .7rem auto;
+  width: 23rem;
+  height: 4rem;
+  font-weight: 100;
+  padding: 2rem;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  color: var(--black);
+  align-items: center;
+  cursor: pointer;
+  background: var(--bg-color);
+  border: .1px solid #3a3a3a;
 }
 
 #menu-btn 
@@ -169,19 +210,7 @@ body.active
   background: rgba(255, 255, 255, 0.1);
   color: var(--black);
 }
-.header .navbar .reset
-{
-  display: flex;
-  margin: 1.7rem auto;
-  padding: 1rem 8rem;
-  border-radius: 5px;
-  font-size: 1.4rem;
-  color: var(--black);
-  align-items: center;
-  cursor: pointer;
-  background: var(--bg-color);
-  border: .1px solid #4d4d4f;
-}
+
 
 .header .navbar button i 
 {
@@ -191,7 +220,7 @@ body.active
 
 .header .navbar a i 
 {
-  margin-right: .5rem;
+  margin-right: 1rem;
   font-size: 1.2rem;
 }
 
@@ -214,7 +243,7 @@ body.active
   margin-top: 3rem;
   text-align: center;
   color: var(--black);
-  border: .5px solid #6b6b6b;
+  border: .5px solid #3a3a3a;
 }
 
 
@@ -326,7 +355,7 @@ form {
   gap: 10px;
   border-radius: 5px;
   border: 1px solid var(--borderline);
-  box-shadow: #000 0px 500px 600px 600px;
+  box-shadow: var(--form-shadow) 0px 500px 600px 600px;
 }
 
 textarea {
@@ -382,6 +411,28 @@ form img {
 }
 form img:hover {
   background: var(--button-hover);
+}
+
+#loading-indicator {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #999;
+  animation: loading 1s infinite ease-in-out;
+  margin-right: 0.2em;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 /*jjjjjjjjjjjjjjjjjjjjjjjj*/
 
@@ -448,7 +499,7 @@ form img:hover {
     position: fixed;
     bottom: 10rem;
     right: 20px;
-    z-index: 1000;
+    z-index: 800;
 }
 
 #scrollBtn i
@@ -459,7 +510,7 @@ form img:hover {
     padding: 5px 6px;
     border-radius: 50%;
     color: var(--text-color);
-    border: .5px solid var(--black);
+    border: .5px solid var(--scrollbtnborder);
 }
 
 #bottom 
@@ -551,7 +602,7 @@ form img:hover {
   {
     left: -110%;
     width: 100vw;
-    padding: 7rem 3rem;
+    padding: 7rem 5rem;
   }
 
   .header.active 
@@ -647,13 +698,5 @@ form img:hover {
   {
     display: none;
   }
-  .header .navbar button
-{
-  padding: 1rem 10rem;
-}
-  .header .navbar a
-{
-  margin: 4rem 0;
-}
 
 }

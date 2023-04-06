@@ -11,6 +11,7 @@ let menu = document.querySelector('#menu-btn')
 let header = document.querySelector('.header')
 let resetbtn = document.querySelector('.reset-btn')
 let del = document.querySelector('#starter')
+let button = document.querySelector('#submitBtn')
 
 // responsive hamburger menu 
 menu.addEventListener('click', () => {
@@ -84,7 +85,7 @@ const handleSubmit = async (e) => {
     messageElement.innerHTML = `
     <img src=${user} class='profile'/><div class='message-text user'>${messageText}</div>`
     chatContainer.appendChild(messageElement)
-    chatContainer.scrollTo(-1000, chatContainer.scrollHeight)
+    chatContainer.scrollTo(0, chatContainer.scrollHeight)
 
     try {
          // https://chat-ai-cohort-2-0.onrender.com
