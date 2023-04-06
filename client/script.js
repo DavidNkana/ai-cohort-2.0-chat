@@ -1,9 +1,9 @@
 import bot from './assets/AI.png'
 import user from './assets/user.png'
 
-
+// variables
 const chatContainer = document.querySelector('#chat-container');
-const message = document.querySelector('#message');
+let message = document.querySelector('#message');
 const form = document.querySelector('form');
 let themeToggle = document.querySelector('#theme-toggler')
 let reset = document.querySelector('.reset')
@@ -77,7 +77,7 @@ const handleSubmit = async (e) => {
     const messageText = message.value;
     const newMessage = {"role": "user", "content": `${messageText}`}
     messages.push(newMessage)
-    message.value = ''
+    form.reset()
     
     const messageElement = document.createElement('div')
     messageElement.classList.add('message')
@@ -117,7 +117,7 @@ const handleSubmit = async (e) => {
     })
     } catch (error) {
         console.error(error); // log the error to the console
-        messageElement.innerHTML = `<p class="errorMessage">Oops! Something doesn't seem right here. Either your prompt is too long, your internet connection is the issue or the server failed. Try prompting shorter texts, checking your internet connection or refreshing the page. It's sure to fix it. Have fun with AI Cohort!</p>`; // alert the user
+        messageElement.innerHTML = `<p class="errorMessage">Oops! Something doesn't seem right here. Either your prompt is too long, your internet connection is the issue or the server failed. Try prompting shorter texts, checking your internet connection or refreshing the page. It's sure to fix it. Have fun with Luna AI!</p>`; // alert the user
         loadingElement.style.display = 'none';
     }
    

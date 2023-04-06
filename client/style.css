@@ -69,10 +69,10 @@ body
 }
 body.active 
 {
-  --ai-bg: #fff;  
+  --ai-bg: #e7e8eb;  
   --form: #ffffff; 
   --form-shadow: #fff;
-  --app: #e7e8eb;   
+  --app: #fff;   
   --borderline: #adadad;   
   --text-color: hsl(0, 0%, 13%);     
   --button-hover: #f7f7f8;
@@ -557,7 +557,6 @@ form img:hover {
 
 
 
-
 /* @media queries */
 
 
@@ -571,6 +570,9 @@ form img:hover {
   padding: 1rem 0;
   font-size: 2.3rem;
 }
+
+
+
   form {
     width: 60%;
   }
@@ -593,6 +595,7 @@ form img:hover {
   {
     padding-left: 0;
   }
+
 
   form {
     width: 90%;
@@ -685,6 +688,7 @@ form img:hover {
   html{
     font-size: 58.5%;
   }
+
   .header 
   {
     width: 100%;
