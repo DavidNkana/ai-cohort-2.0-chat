@@ -3,7 +3,7 @@ import user from './assets/user.png'
 
 // variables
 const chatContainer = document.querySelector('#chat-container');
-let message = document.querySelector('#message');
+const message = document.querySelector('#message');
 const form = document.querySelector('form');
 let themeToggle = document.querySelector('#theme-toggler')
 let reset = document.querySelector('.reset')
@@ -44,7 +44,7 @@ function typeText(element, text) {
         } else {
             clearInterval(interval)
         }
-    }, .5)
+    }, 2)
 }// necessary for typing text effect for that specific reply
 // makes ai write letter by letter
 
@@ -77,7 +77,7 @@ const handleSubmit = async (e) => {
     const messageText = message.value;
     const newMessage = {"role": "user", "content": `${messageText}`}
     messages.push(newMessage)
-    form.reset()
+    message.value = ''
     
     const messageElement = document.createElement('div')
     messageElement.classList.add('message')
@@ -89,7 +89,7 @@ const handleSubmit = async (e) => {
 
     try {
          // https://chat-ai-cohort-2-0.onrender.com
-    const response = await fetch('https://chat-ai-cohort-2-0.onrender.com', {
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
