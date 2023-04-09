@@ -89,7 +89,7 @@ const handleSubmit = async (e) => {
 
     try {
          // https://chat-ai-cohort-2-0.onrender.com
-    const response = await fetch('https://chat-ai-cohort-2-0.onrender.com', {
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -98,7 +98,6 @@ const handleSubmit = async (e) => {
             messages
         })
     })
-    // clearInterval(loadInterval)
 
     .then(res => res.json())
     .then(data => {

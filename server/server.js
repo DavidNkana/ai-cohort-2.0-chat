@@ -10,9 +10,6 @@ const configuration = new Configuration({
     organization: process.env.ORGANIZATION,
 })
 
-console.log(process.env.OPENAI_API_KEY)
-console.log(process.env.ORGANIZATION)
-
 const openai = new OpenAIApi(configuration)
 
 const app = express()
