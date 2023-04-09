@@ -605,7 +605,7 @@ form img:hover {
   {
     left: -110%;
     width: 100vw;
-    padding: 7rem 5rem;
+    padding: 4rem 15rem;
   }
 
   .header.active 
@@ -613,7 +613,7 @@ form img:hover {
     left: 0%;
     transition: .1s linear;
     width: 100vw;
-    z-index: 10000;
+    z-index: 10050;
   }
 
   .head-menu
