@@ -240,7 +240,8 @@ body.active
   border-radius: 50%;
   font-size: 1.4rem;
   cursor: pointer;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
   color: var(--black);
   border: .5px solid #3a3a3a;
@@ -322,7 +323,6 @@ body.active
   font-size: 1.5rem;
   line-height: 3rem;
   font-family: Söhne,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-  margin: 0;
   border-top: .5px solid var(--borderline);
   white-space: pre-wrap;
 }
@@ -605,7 +605,7 @@ form img:hover {
   {
     left: -110%;
     width: 100vw;
-    padding: 4rem 15rem;
+    padding: 4rem 5rem;
   }
 
   .header.active 
