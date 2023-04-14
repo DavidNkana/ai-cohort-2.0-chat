@@ -88,7 +88,7 @@ const handleSubmit = async (e) => {
     chatContainer.scrollTo(0, chatContainer.scrollHeight)
 
     try {
-    const response = await fetch('https://chat-yr1y.onrender.com', {
+    const response = await fetch('https://chat-7icn.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
