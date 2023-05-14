@@ -22,6 +22,7 @@
   --menu-btn: #8b8b8b;  
   --p-b: #3e3f4b;
   --scrollbtnborder: white;
+  --head-menu-items: white;
 }
 
 html::-webkit-scrollbar {
@@ -78,6 +79,7 @@ body.active
   --button-hover: #f7f7f8;
   --p-b: #f7f7f8;
   --scrollbtnborder: #222;
+  --head-menu-items: #111;
 }
 
 .header 
@@ -572,7 +574,7 @@ form img:hover {
 @media (max-width: 1050px) {
   .responsive 
 {
-  color: #fff;
+  color: var(--head-menu-items);
   text-align: center;
   display: block;
   font-weight: 100;
@@ -643,7 +645,7 @@ form img:hover {
 
   #menu-btn 
   {
-    color: #fff;
+    color: var(--head-menu-items);
     position: fixed;
     top: 16px;
     left: 12px;
@@ -671,7 +673,7 @@ form img:hover {
 
   .reset-btn .fa-repeat
   {
-    color: #fff;
+    color: var(--head-menu-items);
     position: fixed;
     top: 16px;
     right: 12px;
