@@ -88,7 +88,8 @@ const handleSubmit = async (e) => {
     chatContainer.scrollTo(0, chatContainer.scrollHeight)
 
     try {
-    const response = await fetch('https://chat-7icn.onrender.com', {
+        // https://chat-7icn.onrender.com
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -115,7 +116,7 @@ const handleSubmit = async (e) => {
     })
     } catch (error) {
         console.error(error); // log the error to the console
-        messageElement.innerHTML = `<p class="errorMessage">Oops! Something doesn't seem right here. Either your prompt is too long, your internet connection is the issue or the server failed. Try prompting shorter texts, checking your internet connection or refreshing the page. It's sure to fix it. Have fun with Luna AI!</p>`; // alert the user
+        messageElement.innerHTML = `<p class="errorMessage">Oops! Something doesn't seem right here. Either your prompt is too long, your internet connection is the issue or the server failed. Try prompting shorter texts, checking your internet connection or refreshing the page. It's sure to fix it. If the problem continues please report it to me at <a href="mailto:davidnkana74@gmail.com" >davidnkana74@gmail.com</a>. Have fun with Luna AI!</p>`; // alert the user
         loadingElement.style.display = 'none';
     }
    

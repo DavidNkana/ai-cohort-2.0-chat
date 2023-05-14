@@ -97,11 +97,11 @@ body.active
 
 .header .logo img
 {
-  margin: .5rem 0;
   border: 1rem solid transparent;
   height: 5rem;
   width: 5rem;
   animation: rotate 2s linear infinite;
+  cursor: pointer;
 }
 
 @keyframes rotate {
@@ -126,6 +126,14 @@ body.active
   color: #00ffcd;
   font-size: 1.2rem;
 }
+hr 
+{
+  background-color: rgb(54, 53, 53);
+  height: .5px;
+  margin-top: 1rem;
+  width: 100%;
+
+}
 
 .header .navbar 
 {
@@ -138,15 +146,14 @@ body.active
   margin: .7rem auto;
   width: 23rem;
   height: 4rem;
-  padding: 2rem;
-  border-radius: 5px;
+  padding: 2rem .7rem;
+  border-radius: 2px;
   font-size: 1.4rem;
   color: var(--black);
   font-weight: 100;
   align-items: center;
   cursor: pointer;
   background: var(--bg-color);
-  border: .1px solid #3a3a3a;
 }
 
 .header .navbar .Previous
@@ -155,14 +162,13 @@ body.active
   margin: .7rem auto;
   width: 23rem;
   height: 4rem;
-  padding: 2rem;
-  border-radius: 5px;
+  padding: 2rem .7rem;
+  border-radius: 2px;
   font-size: 1.4rem;
   color: var(--black);
   align-items: center;
   cursor: pointer;
   background: var(--bg-color);
-  border: .1px solid #3a3a3a;
 }
 
 .header .navbar .reset
@@ -172,14 +178,13 @@ body.active
   width: 23rem;
   height: 4rem;
   font-weight: 100;
-  padding: 2rem;
-  border-radius: 5px;
+  padding: 2rem .7rem;
+  border-radius: 2px;
   font-size: 1.4rem;
   color: var(--black);
   align-items: center;
   cursor: pointer;
   background: var(--bg-color);
-  border: .1px solid #3a3a3a;
 }
 
 #menu-btn 
@@ -214,13 +219,13 @@ body.active
 
 .header .navbar button i 
 {
-  margin-right: 1rem;
+  margin-right: 2rem;
   font-size: 1.2rem;
 }
 
 .header .navbar a i 
 {
-  margin-right: 1rem;
+  margin-right: 2rem;
   font-size: 1.2rem;
 }
 
@@ -244,7 +249,6 @@ body.active
   margin-bottom: 2rem;
   text-align: center;
   color: var(--black);
-  border: .5px solid #3a3a3a;
 }
 
 
@@ -331,7 +335,7 @@ body.active
 {
   margin: 30px 0;
   font-size: 1.4rem;
-  color: #6f94b9;
+  color: #6f94b9ce;
   line-height: 2rem;
 }
 
@@ -538,6 +542,11 @@ form img:hover {
 }
 
 
+.errorMessage a
+{
+  color: var(--green);
+}
+
 
 
 
@@ -604,23 +613,23 @@ form img:hover {
   .header 
   {
     left: -110%;
-    width: 100vw;
-    padding: 4rem 5rem;
+    padding: 7rem 1rem;
   }
 
   .header.active 
   {
     left: 0%;
     transition: .1s linear;
-    width: 100vw;
+    width: 70%;
     z-index: 10050;
   }
 
   .head-menu
   {
-    background: var(--bg-color);
+    background: var(--ai-bg);
     position: fixed;
     top: 0;
+    border-bottom: .5px solid var(--black);
     left: 0;
     width: 100%;
     align-items: center;
