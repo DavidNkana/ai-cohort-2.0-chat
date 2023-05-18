@@ -23,6 +23,7 @@
   --p-b: #3e3f4b;
   --scrollbtnborder: white;
   --head-menu-items: white;
+  --head-menu-border: white;
 }
 
 html::-webkit-scrollbar {
@@ -80,6 +81,7 @@ body.active
   --p-b: #f7f7f8;
   --scrollbtnborder: #222;
   --head-menu-items: #111;
+  --head-menu-border: #111;
 }
 
 .header 
@@ -92,7 +94,7 @@ body.active
   background: var(--bg-color);
   width: 25rem;
   border-right: var(--box-shadow);
-  height: 100%;
+  height: 100vh;
   padding: .5rem;
   text-align: center;
 }
@@ -148,7 +150,7 @@ hr
   margin: .7rem auto;
   width: 23rem;
   height: 4rem;
-  padding: 2rem .7rem;
+  padding: 2rem .8rem;
   border-radius: 2px;
   font-size: 1.4rem;
   color: var(--black);
@@ -164,7 +166,7 @@ hr
   margin: .7rem auto;
   width: 23rem;
   height: 4rem;
-  padding: 2rem .7rem;
+  padding: 2rem .8rem;
   border-radius: 2px;
   font-size: 1.4rem;
   color: var(--black);
@@ -180,7 +182,7 @@ hr
   width: 23rem;
   height: 4rem;
   font-weight: 100;
-  padding: 2rem .7rem;
+  padding: 2rem .8rem;
   border-radius: 2px;
   font-size: 1.4rem;
   color: var(--black);
@@ -380,6 +382,7 @@ textarea {
 textarea::placeholder 
 {
   color: #8e8ea0;
+  font-style: italic;
 }
 
 
@@ -631,7 +634,7 @@ form img:hover {
     background: var(--ai-bg);
     position: fixed;
     top: 0;
-    border-bottom: .5px solid var(--black);
+    border-bottom: .5px solid var(--head-menu-border);
     left: 0;
     width: 100%;
     align-items: center;
